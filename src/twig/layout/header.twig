@@ -1,0 +1,34 @@
+<header class="site-header">
+    <div class="site-header__logo-box">
+        <div class="site-header__burger js-bar__toggle">
+            {% include '../components/svg.twig' with {id: 'burger', width: 35, height: 14} %}
+        </div>
+        <a href="/" class="site-logo">
+            <img src="images/logo.png" alt="Work 5">
+        </a>
+    </div>
+    {% include '../components/breadcrumb.twig' with {
+        crumbs: [
+            { name: 'Мои магазины' }
+        ],
+        containerClass: 'site-header__breadcrumb',
+    }  %}
+    <div class="site-header__actions">
+        <div>
+            <a href="#" class="btn-icon">
+                <span class="btn-icon__center">
+                    <span class="btn-icon__notify"></span>
+                    {% include '../components/svg.twig' with {id: 'envelope', width: 21, height: 18} %}
+                </span>
+            </a>
+        </div>
+        <div>
+            <a href="#" class="user-dropdown">
+                <span class="user-dropdown__avatar">
+                    <img src="images/uploads/avatar.jpg" alt="Максим Добжанский" class="user-dropdown__avatar-img">
+                </span>
+                <span class="user-dropdown__name">Максим Добжанский</span>
+            </a>
+        </div>
+    </div>
+</header>

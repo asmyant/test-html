@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {# Head #}
+    {% include '../layout/head.twig' %}
+    {% block head %}{% endblock %}
+</head>
+<body>
+
+{# Wrapper #}
+<div class="site-wrapper">
+    {# Bar #}
+    {% include "../layout/bar.twig" with {class: 'site-wrapper__bar'} %}
+
+    {# Content #}
+    <main class="site-content site-wrapper__content">
+        {% include "../layout/header.twig" %}
+        {% block content %}{% endblock %}
+    </main>
+</div>
+
+{# Scripts #}
+{% include '../layout/scripts.twig' %}
+{% block scripts %}{% endblock %}
+</body>
+</html>

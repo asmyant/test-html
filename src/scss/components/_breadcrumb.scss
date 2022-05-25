@@ -1,0 +1,38 @@
+.breadcrumb {
+   @include list-null;
+   display: flex;
+   font-size: 12px;
+   font-weight: 500;
+
+   svg {
+      fill: color(grey);
+      margin: 0 3px;
+   }
+
+   &__li {
+      &:not(:last-child) {
+         margin-right: 15px;
+      }
+   }
+
+   &__link {
+      color: color(grey);
+      transition: $transition color;
+      display: flex;
+      align-items: center;
+
+      span, svg {
+         display: block;
+      }
+
+      &:not(.is--active) {
+         &:hover, & {
+            text-decoration: none;
+         }
+
+         &:hover {
+            color: color(purple);
+         }
+      }
+   }
+}

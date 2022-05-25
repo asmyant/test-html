@@ -1,0 +1,47 @@
+// Footer bottom
+@mixin full-height-content() {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   .site-main {
+      flex-grow: 1;
+   }
+}
+
+// Flex centering
+@mixin flex-center-block() {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+// Center block transform
+@mixin transform-center-xy() {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+
+// Vertical centering block
+@mixin transform-center-x() {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+// Horizontal centering block
+@mixin transform-center-y() {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+// List null styles
+@mixin list-null {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}

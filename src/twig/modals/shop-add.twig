@@ -1,0 +1,67 @@
+<div class="modal fade" id="shopAdd" tabindex="-1" aria-labelledby="shopAddLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content" method="post" action="#">
+            <div class="modal-header">
+                <div class="h1">Создать магазин</div>
+
+                <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+                    {% include '../components/svg.twig' with {id: 'cross', width: 12, height: 12} %}
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row justify-content-between">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="template" class="form-label">Шаблон</label>
+                            <select name="template" id="template" required="" class="form-select">
+                                <option value="standard">Стандартный</option>
+                                <option value="business">Бизнес</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="color-scheme" class="form-label">Цветовая схема</label>
+                            <select name="color-scheme" id="color-scheme" required="" class="form-select">
+                                <option value="classic">Классическая</option>
+                                <option value="red">Крассный</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="domain" class="form-label">Домен</label>
+                            <div class="form-addon">
+                                <input type="text" class="form-input" required="" name="domain" id="domain"
+                                       placeholder="Например: ivangrozniy">
+                                <div class="form-addon__text">.work5.ru</div>
+                            </div>
+
+                            <div class="invalid-feedback">Example invalid feedback text</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="info-alert">
+                           <div>
+                               {% include '../components/svg.twig' with {id: 'info-warning', width: 55, height: 55} %}
+                           </div>
+
+                            <div class="info-alert__text">
+                                В названии домена разрешены латиница и “-”, запрещается использовать словосочетание Work 5.
+                                После создания магазина Вы сможете прикрутить свой домен (например ivangrozniy.ru).
+                                Подробнее по <a href="#" class="link link--purple">ссылке</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-bs-dismiss="modal" class="btn btn--theme-grey">Отмена</button>
+                <button type="submit" class="btn btn--theme-green">Создать</button>
+            </div>
+        </form>
+    </div>
+</div>

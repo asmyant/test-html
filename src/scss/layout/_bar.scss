@@ -1,0 +1,34 @@
+.site-bar {
+   background: color(white);
+   box-shadow: 0 0 38px 0 rgba(color(grey300), 0.08);
+
+   @include media-breakpoint-down(lg) {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      bottom: 0;
+      transform: translateX(-100%);
+      transition: $transition transform;
+      z-index: 2;
+
+      &.is-show {
+         transform: translateX(0);
+      }
+   }
+
+   &__logo {
+      margin: 0px 0 18px 23px;
+      display: inline-block;
+
+      @include media-breakpoint-down(lg) {
+         display: none;
+      }
+   }
+
+   &__wrapper {
+      @include media-breakpoint-up(lg) {
+         position: sticky;
+         top: 30px;
+      }
+   }
+}

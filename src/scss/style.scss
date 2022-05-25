@@ -1,0 +1,45 @@
+// Bootstrap core
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// Base
+@import 'base/body';
+@import 'base/typography';
+@import 'base/utils';
+
+// Layout
+@import 'layout/container';
+@import 'layout/wrapper';
+@import 'layout/menu';
+@import 'layout/bar';
+@import 'layout/page';
+@import 'layout/header';
+
+// Components
+@import "components/table";
+@import "components/breadcrumb";
+@import "components/link";
+@import "components/alert";
+
+// User components
+@import "components/user/user-dropdown";
+
+// Button components
+@import "components/btn/btn";
+@import "components/btn/btn-icon";
+
+// Bootstrap customize
+@import "components/bootstrap/modal";
+
+// Form components
+@import "components/form/group";
+@import "components/form/label";
+@import "components/form/select";
+@import "components/form/input";
+@import "components/form/addon";

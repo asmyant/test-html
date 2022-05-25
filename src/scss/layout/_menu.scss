@@ -1,0 +1,73 @@
+$icons: ('home', 'shop', 'materials', 'statistics', 'balance', 'personal-information', 'faq', 'support', 'logout');
+$i: 0;
+
+.site-menu {
+   @include list-null;
+
+   &__link {
+      height: 45px;
+      display: flex;
+      align-items: center;
+      padding-left: 25px;
+      margin-bottom: 5px;
+      color: color(grey200);
+      transition: color $transition;
+      font-weight: 500;
+      position: relative;
+
+      &:before {
+         width: 0;
+         height: 100%;
+         background: color(purple);
+         content: '';
+         left: 0;
+         position: absolute;
+         transition: $transition width, box-shadow $transition;
+      }
+
+      &, &:hover {
+         text-decoration: none;
+      }
+
+      &:hover, &.is--active {
+         color: color(grey300);
+
+         &:before {
+            width: 5px;
+            box-shadow: 0 2px 3.3px 6.7px rgba(color(purple), .1);
+         }
+      }
+   }
+
+   &__link-icon {
+      width: 25px;
+      height: 27px;
+      margin-right: 20px;
+      background: image('sprites/menu.png') no-repeat center;
+
+      @include media-breakpoint-down(xxl) {
+         margin-right: 10px;
+      }
+
+      @each $icon in $icons {
+         &--#{$icon} {
+            @if $i == 0 {
+               $i: 0;
+            } @else {
+               $i: $i - 1;
+            }
+
+            background-position: 0 -#{$i}px;
+
+            @at-root .site-menu__link {
+               &:hover {
+                  .site-menu__link-icon--#{$icon} {
+                     background-position: -27px -#{$i}px;
+                  }
+               }
+            }
+         }
+         $i: $i + 50;
+      }
+   }
+}

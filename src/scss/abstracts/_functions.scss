@@ -1,0 +1,18 @@
+@use "variables";
+@use "sass:math";
+
+// Image path
+@function image($url) {
+   @return url(variables.$image-directory + '/' + #{$url})
+}
+
+// Get color
+@function color($name) {
+   @return map-get(variables.$theme-colors, $name)
+}
+
+//-
+@function strip-unit($value) {
+  $res1: $value * 0 + 1;
+  @return math.div($value, $res1);
+}

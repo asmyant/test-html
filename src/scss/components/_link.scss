@@ -1,0 +1,25 @@
+.link {
+   transition: color $transition;
+
+   &, &:hover {
+      text-decoration: none;
+   }
+
+   &--dark {
+      color: color(grey);
+
+      &:hover {
+         color: color(purple);
+      }
+   }
+
+   &--purple {
+      &, &:hover {
+         color: color(purple);
+      }
+
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}

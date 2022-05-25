@@ -1,0 +1,29 @@
+{% set menu = [
+    { class: 'home', text: 'Главная' },
+    { class: 'shop', text: 'Мои магазины' },
+    { class: 'materials', text: 'Промоматериалы' },
+    { class: 'statistics', text: 'Статистика' },
+    { class: 'balance', text: 'Баланс' },
+    { class: 'personal-information', text: 'Персональные данные' },
+    { class: 'faq', text: 'FAQ' },
+    { class: 'support', text: 'Техподдержка' },
+    { class: 'logout', text: 'Выход' },
+] %}
+
+<aside class="site-bar {{ class }} js-bar">
+    <div class="site-bar__wrapper">
+        <a href="/" class="site-logo site-bar__logo">
+            <img src="images/logo.png" alt="Work 5">
+        </a>
+        <ul class="site-menu">
+            {% for item in menu %}
+                <li>
+                    <a href="#" class="site-menu__link {{ loop.index == 1 ? 'is--active' : '' }}">
+                        <span class="site-menu__link-icon site-menu__link-icon--{{ item.class }}"></span>
+                        {{ item.text }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</aside>

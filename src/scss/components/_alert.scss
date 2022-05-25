@@ -1,0 +1,14 @@
+.info-alert {
+   display: flex;
+   align-items: center;
+   font-size: 12px;
+
+   &__text {
+      line-height: 1.5;
+   }
+
+   svg {
+      fill: color(purple);
+      margin-right: 15px;
+   }
+}

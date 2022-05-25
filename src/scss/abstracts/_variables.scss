@@ -1,0 +1,51 @@
+// Image directory
+$image-directory: '../images';
+
+// Grid
+$grid-breakpoints: (
+   xs: 0,
+   sm: 576px,
+   md: 768px,
+   lg: 992px,
+   xl: 1200px,
+   xxl: 1400px
+);
+
+// Colors
+$theme-colors: (
+   green: #55c97b,
+   purple: #6666cc,
+   grey: #656565,
+   grey100: #b1b1b1,
+   grey200: #7b7b7b,
+   grey300: #343434,
+   grey400: #e4e4e4,
+   grey500: #d4d4d4,
+   grey600: #cdcdcd,
+   grey700: #e6e6e9,
+   white100: #f8faff,
+   white: #ffffff,
+   red: #e42626,
+);
+
+// Container
+$container-max-widths: (
+   xxl: 1440px
+);
+
+// Gutters
+$gutters: ();
+
+// Typography
+$font-family-base: 'Roboto', sans-serif;
+$font-size: 14px;
+
+// Transition
+$transition: .3s;
+
+// Bootstrap utilities
+$utilities: ();
+
+//Border radius
+$border-radius-md: 10px;
+$border-radius-sm: 5px;

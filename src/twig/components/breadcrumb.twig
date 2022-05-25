@@ -1,0 +1,23 @@
+<ul class="breadcrumb {{ containerClass }}" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="/" class="breadcrumb__link">
+            <span itemprop="name">
+                Главная
+            </span>
+            {% include '../components/svg.twig' with {id: 'right-arrow', width: 8, height: 12} %}
+        </a>
+        <meta itemprop="position" content="{{ loop.index }}" />
+    </li>
+
+    {% for crumb in crumbs %}
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ crumb.link }}" class="breadcrumb__link">
+                <span itemprop="name">{{ crumb.name }}</span>
+                {% if loop.index != crumbs|length %}
+                    {% include '../components/svg.twig' with {id: 'right-arrow', width: 8, height: 12} %}
+                {% endif %}
+            </a>
+            <meta itemprop="position" content="{{ loop.index }}" />
+        </li>
+    {% endfor %}
+</ul>

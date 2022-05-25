@@ -1,0 +1,28 @@
+.form-addon {
+   display: flex;
+   border-radius: $border-radius-sm;
+   overflow: hidden;
+
+   & > * {
+      &:first-child {
+         border-bottom-right-radius: 0;
+         border-top-right-radius: 0;
+      }
+
+      &:last-child {
+         border-bottom-left-radius: 0;
+         border-top-left-radius: 0;
+      }
+   }
+
+   &__text {
+      background-color: color(purple);
+      min-width: 150px;
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      justify-content: center;
+      color: color(white);
+      border-radius: $border-radius-sm;
+   }
+}

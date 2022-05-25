@@ -1,0 +1,46 @@
+.btn-icon {
+   width: 65px;
+   height: 65px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid color(grey500);
+   border-radius: $border-radius-sm;
+   transition: background-color $transition;
+
+   @include media-breakpoint-down(lg) {
+      height: 45px;
+      width: 45px;
+   }
+
+   &__center {
+      position: relative;
+
+      svg {
+         fill: color(grey200);
+      }
+   }
+
+   &__notify {
+      height: 12px;
+      width: 12px;
+      border: 3px solid color(white);
+      display: block;
+      border-radius: 50%;
+      background-color: color(red);
+      position: absolute;
+      right: -4px;
+      top: -4px;
+      animation: pulse .5s infinite ease-in-out alternate-reverse;
+   }
+
+   &:hover {
+      background-color: color(grey500);
+   }
+}
+
+@keyframes pulse {
+   100% {
+      transform: scale(1.2);
+   }
+}

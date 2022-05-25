@@ -1,0 +1,4 @@
+<svg {{ width ? 'width=' ~width : '' }} {{ height ? 'height=' ~height : '' }}>
+    <use xlink:href="images/svg-sprite.svg#{{ id }}"></use>
+</svg>
+{#{% include 'components/svg.twig' with {id: '', width: '', height: ''} %}#}

@@ -1,0 +1,7 @@
+.form-group {
+   margin-bottom: 30px;
+
+   @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+   }
+}

@@ -1,0 +1,53 @@
+.btn {
+   height: 35px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0 20px;
+   font-size: 12px;
+   border-radius: $border-radius-sm;
+   transition: transform $transition, box-shadow $transition;
+   font-weight: 500;
+   border: none;
+
+   svg {
+      margin-right: 8px;
+   }
+
+   &:hover {
+      transform: scale(1.05);
+   }
+
+   &, &:hover {
+      text-decoration: none;
+      color: color(white);
+   }
+
+   &--theme {
+      &-green {
+         background: color(green);
+         color: color(white);
+
+         &:focus {
+            box-shadow: 0 0 0 0.25rem rgba(color(green), .4);
+         }
+
+         svg {
+            fill: color(white);
+         }
+      }
+
+      &-grey {
+         background: color(grey100);
+         color: color(white);
+
+         &:focus {
+            box-shadow: 0 0 0 0.25rem rgba(color(grey100), .4);
+         }
+
+         svg {
+            fill: color(white);
+         }
+      }
+   }
+}

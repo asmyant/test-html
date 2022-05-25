@@ -1,0 +1,90 @@
+{#- Home page -#}
+{% extends 'templates/base.twig' %}
+
+{% block content %}
+    {% set shops = [
+        {title: 'Дипломная работа', link: 'https://www.google.com/search?q=adobe+photoshop'},
+        {title: 'Какой-то длинный текст', link: 'https://translate.google.com/'},
+        {title: 'Дипломная работа', link: 'https://www.google.com/search?q=adobe+photoshop'},
+        {title: 'Какой-то длинный текст', link: 'https://translate.google.com/'},
+        {title: 'Дипломная работа', link: 'https://www.google.com/search?q=adobe+photoshop'},
+        {title: 'Какой-то длинный текст', link: 'https://translate.google.com/'},
+        {title: 'Дипломная работа', link: 'https://www.google.com/search?q=adobe+photoshop'},
+        {title: 'Какой-то длинный текст', link: 'https://translate.google.com/'},
+        {title: 'Дипломная работа', link: 'https://www.google.com/search?q=adobe+photoshop'},
+        {title: 'Какой-то длинный текст', link: 'https://translate.google.com/'},
+    ] %}
+
+    <div class="site-page">
+        {% include 'components/breadcrumb.twig' with {
+            crumbs: [
+                { name: 'Мои магазины' }
+            ],
+            containerClass: 'site-page__breadcrumb',
+        }  %}
+
+        <div class="site-page__header">
+            <button type="button"  class="btn btn--theme-green" data-bs-toggle="modal" data-bs-target="#shopAdd">
+                {% include 'components/svg.twig' with {id: 'plus', width: 10, height: 10} %}
+                Создать свой магазин
+            </button>
+        </div>
+
+        <h1 class="site-page__title h1">Управление магазинами</h1>
+
+        <div class="table table--shops">
+            <div class="table__head">
+                <div class="table__row">
+                    <div class="table__td table__td--index">
+                        №
+                    </div>
+                    <div class="table__td table__td--title">
+                        Название
+                    </div>
+                    <div class="table__td table__td--link">
+                        Адрес
+                    </div>
+                    <div class="table__td table__td--actions">
+                        Действие
+                    </div>
+                </div>
+            </div>
+            <div class="table__body">
+                {% for shop in shops %}
+                    <div class="table__tr">
+                        <div class="table__row">
+                            <div class="table__td table__td--index">
+                                <div class="table__hidden-head">№</div>
+                                {{ 1001 - loop.index }}
+                            </div>
+                            <div class="table__td table__td--title">
+                                <div class="table__hidden-head">Название</div>
+                                <div class="table__text" data-text="{{ shop.title }}">
+                                    {{ shop.title }}
+                                </div>
+                            </div>
+                            <div class="table__td table__td--link">
+                                <div class="table__hidden-head">Адрес</div>
+                                <a href="{{ shop.link }}" class="table__text link--dark link" data-text="{{ shop.link }}">
+                                    {{ shop.link }}
+                                </a>
+                            </div>
+                            <div class=" table__td--actions table__td">
+                                <a href="#" class="btn table__btn btn--theme-green">
+                                    {% include 'components/svg.twig' with {id: 'pencil', width: 14, height: 14} %}
+                                    <span>Редактировать</span>
+                                </a>
+                                <a href="#" class="btn table__btn btn--theme-grey">
+                                    {% include 'components/svg.twig' with {id: 'cross', width: 12, height: 12} %}
+                                    <span>Удалить</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% include 'modals/shop-add.twig' %}
+{% endblock %}

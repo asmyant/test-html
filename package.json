@@ -1,0 +1,60 @@
+{
+  "name": "gulp-start-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build --prod",
+    "init": "npm i & npm run dev"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "author": "Tigran Asmyan",
+  "dependencies": {
+    "@popperjs/core": "^2.11.5",
+    "bootstrap": "^5.0.2",
+    "svg4everybody": "^2.1.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/register": "^7.15.3",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.2.3",
+    "babel-node": "0.0.1-security",
+    "browser-sync": "^2.27.4",
+    "date-and-time": "^2.0.1",
+    "fs": "0.0.1-security",
+    "glob": "^7.2.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-gzip": "^1.4.2",
+    "gulp-if": "^3.0.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-open": "^3.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-pug-beautify": "^0.0.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-shorthand": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-twig": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-version-number": "^0.2.4",
+    "gulp-zip": "^5.1.0",
+    "node-sass": "^4.14.1",
+    "path": "^0.12.7",
+    "sass": "^1.35.1",
+    "vinyl-ftp": "^0.6.1",
+    "webpack": "^4.12.0",
+    "webpack-stream": "^6.1.2"
+  }
+}

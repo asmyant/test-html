@@ -1,0 +1,52 @@
+.site-header {
+   display: flex;
+   justify-content: space-between;
+
+   @include media-breakpoint-up(lg) {
+      margin-bottom: 10px;
+   }
+
+   @include media-breakpoint-down(lg) {
+      background-color: color(white);
+      padding: 18px 20px;
+      position: relative;
+      z-index: 4;
+   }
+
+   &__breadcrumb.breadcrumb {
+      @include media-breakpoint-down(lg) {
+         display: none;
+      }
+   }
+
+   &__burger {
+      margin-right: 15px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      svg {
+         fill: color(grey200);
+      }
+   }
+
+   &__logo-box {
+      display: flex;
+      align-items: center;
+
+      @include media-breakpoint-up(lg) {
+         display: none;
+      }
+   }
+
+   &__actions {
+      display: flex;
+      margin: 0 -10px;
+      align-items: center;
+
+      & > div {
+         padding: 0 10px;
+      }
+   }
+}
